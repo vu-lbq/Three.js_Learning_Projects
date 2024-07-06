@@ -62,7 +62,7 @@ controller.maxPolarAngle = (3 * Math.PI) / 4;
 
 // create a cube and torus knot and add them to the scene
 const cubeGeometry = new THREE.BoxGeometry();
-const cubeMaterial = new THREE.MeshPhongMaterial({ color: 0x0000ff });
+const cubeMaterial = new THREE.MeshPhongMaterial({ color: 0xff0000 });
 const cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
 
 cube.position.x = -1;
@@ -71,7 +71,7 @@ scene.add(cube);
 
 const torusKnotGeometry = new THREE.TorusKnotBufferGeometry(0.5, 0.2, 100, 100);
 const torusKnotMat = new THREE.MeshStandardMaterial({
-  color: 0x00ff88,
+  color: 0x00ffff,
   roughness: 0.1,
 });
 const torusKnotMesh = new THREE.Mesh(torusKnotGeometry, torusKnotMat);
@@ -122,9 +122,9 @@ function animate() {
   torusKnotMesh.rotation.z -= props.torusSpeed;
 
   // uncomment this to have the cube jump around
-  //   step += 0.04;
-  //   cube.position.x = 4*(Math.cos(step));
-  //   cube.position.y = 4*Math.abs(Math.sin(step));
+  // step += 0.04;
+  // cube.position.x = 4*(Math.cos(step));
+  // cube.position.y = 4*Math.abs(Math.sin(step));
 
   controller.update();
 }
